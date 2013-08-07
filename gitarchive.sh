@@ -4,6 +4,15 @@
 # Takes one parameter: a remote git repository URL.
 # Creates: a gzipped tarball of all branches of the supplied URL.
 
+# This is the stuff this script does:
+#
+# 1. Clones the repository
+# 2. Fetches all remote branches
+# 3. Compresses the folder
+# 4. Deletes the cloned folder.
+#
+# Your remote repository is left untouched by this script.
+
 if [ "$1" = "" ]
 then
 echo "Usage: $0 <git repositiry clone URL>" 1>&2
